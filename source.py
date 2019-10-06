@@ -47,4 +47,24 @@ def login1():
 
 @app.route('/landing',methods=['GET','POST'])
 def landing():
-    return "Hi " + session['username'] + "Logged in as" + session ['role']
+    return render_template('landing.html')
+
+@app.route('/save',methods = ['POST'])
+def save():
+    if request.method == 'POST':
+        webex = request.form.get('webex', None)
+        finesse = request.form.get('finesse', None)
+        cmsp = request.form.get('cmsp', None)
+        splunk = request.form.get('splunk', None)
+        vdi = request.form.get('vdi', None)
+        ncm = request.form.get('ncm', None)
+        sevone = request.form.get('sevone', None)
+        eigrp = request.form.get('eigrp', None)
+        ospf = request.form.get('ospf', None)
+        cand.insert({'name':session['username'],'webex':webex,'finesse':finesse,'cmsp':cmsp,'splunk':splunk,'vdi':vdi,'ncm':ncm,'sevone':sevone,'eigrp':eigrp,'ospf':ospf})
+    return 'Thanks for your feedback!'
+
+@app.route('/start',methods = ['POST'])
+def start():
+    candis = cand.find()
+    return render_template('start.html', candis=candis)
