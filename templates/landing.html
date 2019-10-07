@@ -114,88 +114,693 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 {%endif%}
+<!-- MANAGER ENDS -->
+<!-- ENGINEER BEGINS -->
 {%if session['role'] == 'engineer' or session['role'] == 'technical'%}
-<div class="panel panel-default">
-        <div class="panel-heading">
-                <h3 class="text-center cisco"><strong>Internal Requirements</strong></h3>
+<div class="container"> 
+<div class="jumbotron" style="background-color: white">
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            
+                <div class="col-md-6" style="margin-bottom:10px">
+                <a href="/landing"><img style="height:83   px; width:100px;float: left;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAACXCAMAAAAvQTlLAAAAb1BMVEX///8AodkAn9gAmdYAndjx+/7q+P16wuaw3/JEsN8Am9fx+f2k1+4SpNrM7fi55fWU0ewert48tuFuweabz+vD6vfV8fprxOfZ7ffh8/r4/f5btuEnq91iuuJOuuPG5/WCzOq84PKZ1+6LyumK0+3LixkUAAAF2UlEQVR4nO2aCZOjLBCGA6JR4zGaw2PwGCf//zcuCCJ4JRnzfTu11W/VbtWEpnk4bBr0cACBQCAQCAQCgUAgEAgEAoFAoH9CRRDc3uAmCtziDW6UcoowjXe7cSlG3jvBEowQ9ne7sRBCJHkDj+4QWfZOL45w8xYiod6hv5vLB65XBFyvCbhe0z/MVZp/LnGVE5slL6bJItdjL6PiqqqM3XDOVZyr6mN7AMugqs76brjANWtpS02IMUZ6/jDn8gizCTbdBMzC2A3nXDfEbMLmSS6X18ftFtct5Dt5ujVgZc1NwmiLq8V8J9/u3qiAcK7jFlfEuVBy2vBip9wk1GZpznXsuT7ezIWBC7ie4ZrEtp9ymW5+zDW4KY7Ho7ufK2Zurru5yoC56YOx80kwCXWwH3E1lLmhWrT6GVfAIi2peEsuNyZHbRJ+xHXhlchlJ1d5JDwYx4rirDX6F7nsM/8FucAFXMD1u7hwz/XfxC/8avwauSLKKfSY+8WyaIz1HWDGZVNWn7R6ZziFUantQ6SzxeX2LX1pv3zzSrTP4TtsWbVxPsiITzLth4X8vkOW7+XaD3Zm+Varm+SpZaFO9zs/d/QtaeiHG6skzw1lkedmom7nTW6kCgvntKJpzGzilOd5OfmlMS4HF7iYyaRtJ8+fv1H8NefaiX411/57zLdzEf70Wq8c2Zdk8+7h8C1EQi0DI/VuNylBmLT7cZROLSbZ/ov3vPZRu3c1gEAgEAj091S67ZGr7cYrGvvWy7BzuqO0i2fpRtFJH/OX7fGHKHnxnbmTUX6zLqQutdz+rOJpdqcsVGa4M3006Vhm5jYnV3lHtNu6czRlB7RPuITIyOVzVxpXkeh2BlfR8lalMNKL4pSgUX767GuFQzZ6NLn6c+XIVaSGnc5VeLoPg8sN9Vo8UZwM9HNYG1wfQ7/50GCdq6CGC51risVrPwXWjsPfr4BVrlK0gFFSVVUS+qN3Rw1k70HnahQW64oyemL5DxUxIUldp8i31riK/hiBqZvbtnNrvsYH9UO2iH2U1nVCCFZFyVBEaEJ9uTzx449Q+rdN/ay3Rcl0ius1rkZwzSfBGbpG3RP34XSqTkfkWGU5Kygyafn41UI+uByvvFVcmnBdBdfc5V02XjvTEscT7tW3PlexEHH4KFq0RPZ0oWzCFcl5DKYBlQqsdD45ctH743qKBZi/1J4uMf/GJdMa18mXc0Lv5jWEGJNwoamL6LV+JyMeM/zoECgnfPEBmT6P9fBAEVx/jXN2FS3R+TFY3LphpN8DFX2LmG5j2cIqXDzkTePX+MyzR71W+6i7OgJOhecTTEWL21xOuGE15ToEWowc3xh3eDZZg/d+hCfPQ/oMl/0S1yHSthucyGFw17mqda7ty49Sci1+TDjnOjhBjYe9e4gYseDy5g7k+kqMedwaiYkVQos71gIXv/G7U4z1eBXJkDTvW3kURfqFaiw69ejrvlp2dhYS17i4WrnC5HMmNj7jQwepQIbVcdLsfmrRw1seVwQltLA61rlOwjnOjb6F8+8iIiopFFgrI000s500IZMEnA1Vb2o1rHIdvg2uRvZtTKxUOPyU29xZzEeZybFNH975qVwgzJo8d9tkNZ+w80KEOdulxnpWez9J7k3eBFlIhjo3PBRlbuNKKva/vuKWNWyt/H0uy3XYv9V8Aqfn70twuVShHIQhGo8Bl9XvkxnlvlW5JGEFQ1PZE5d1jcrXpOs1rsgXZwflflxPd2L40PJCpyZoKkyXnrKZYjPTXR8v3+TPtDXSGp3T82j7PAXD9Mkb0tjTqz7JNfm4qdM7Z5w7nLM5lrjWt/FNORmf+z4zx9hfO6ddrfHsSEg7mYsoFcXilKCXsOOjr1W8P3+AZGT3T0pDJupVapQb75NJpWY3zxM2zGhK1XNn3lA8jYZd1dek3mf36kuB8nZ1XTdutpakc7vGXLcV53YUcx/RwtNWNDFz/taP8UEgEAgEAoFAIBAIBAKBQCAQ6H/VH+WTWuXCLWSbAAAAAElFTkSuQmCC"></a>
+                <a class="navbar-brand" href="/landing"><b><h2 class="cisco">CMS HSBC Onboarding</h2></b></a>
+                
+                </div>
+                
+                
+                <div style="float:right; margin:10px; margin-top:20px">
+                <button class="btn btn-outline-success btn-primary" onclick="location.href='/logout'">Logout</button></form>
+                </div>
+                {% if session['role'] == 'Manager' %}
+                <div style="float:right; margin:10px; margin-top:20px">                      
+                <button class="btn btn-outline-success btn-success" onclick="location.href='/add_opening'">Add Engineer</button></form>
+                </div>
+                {% endif %}
+        </nav>  
+        <div class="col-md-12 cisco"><h4>Welcome, {{ session['username'] }}. View/Edit your progress below</h4></div>
+</div>
+        <!-- Cisco Tools-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="text-center cisco"><strong>Cisco Hosted Tools</strong></h3>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                          50% Complete
+                        </div>
+                      </div>
+                      
             </div>
-<div class="panel-body">
-        <div class="table-responsive">
-                <form action="/save" method="POST" id='openings_id'> 
-                <table class="table table-hover table-striped table-bordered table-sm" cellspacing="4" width="100%">
-                    <thead>
-                        <tr>
-                                <td class="text-center"><strong>Tool</strong></td>
-                                <td class="text-center"><strong>Option</strong></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                  
-                        <tr>
-                            <td  bgcolor= '08F4E4' class="highrow text-center">Webex</td>
-                            <td class="highrow text-center">
-                                    <input type="checkbox" name="webex" form="openings_id" value="true" >
-                            </td>   
-                         </tr>   
-                         <tr >
-                                <td  bgcolor= '08F4E4' class="highrow text-center">Finesse </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="finesse"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= '08F4E4' class="highrow text-center">CMSP </td>
-                                <td  class="highrow text-center">
-                                        <input type="checkbox" name="cmsp"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= '08F4E4' class="highrow text-center">Splunk </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="splunk"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= 'F4082F' class="highrow text-center">HSBC VDI </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="vdi"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= 'F4082F' class="highrow text-center">NCM </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="ncm"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= 'F4082F' class="highrow text-center">SevOne </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="sevone"  value="true">
-                                </td>   
-                        </tr>   
-                        <tr>
-                                <td  bgcolor= '08F45C' class="highrow text-center">EIGRP </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="eigrp"  value="true">
-                                </td>   
-                        </tr> 
-                        <tr>
-                                <td  bgcolor= '08F45C' class="highrow text-center">OSPF </td>
-                                <td class="highrow text-center">
-                                        <input type="checkbox" name="ospf"  value="true">
-                                </td>   
-                        </tr> 
+        <div class="panel-body">
+                <div class="table-responsive">
+                        <form action="/save" method="POST" id='openings_id'> 
+                        <table class="table table-hover table-striped table-bordered table-sm" cellspacing="4" width="100%">
+                            <thead>
+                                <tr>
+                                        <td style="width:600px" class="text-center"><strong>Requirement</strong></td>
+                                        <td class="text-center"><strong>Completed</strong></td>
+                                        <td class="text-center"><strong>Trainer</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                          
+                                <tr>
+                                    <td  bgcolor= '049FD9' class="highrow text-center">Mailer lists, Webex Rooms</td>
+                                    <td class="highrow text-center">
+                                            <input type="checkbox" name="webex" form="openings_id" value="true" >
+                                    </td>   
+                                    <td class="highrow text-center">
+                                            <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                    </td>   
+                                 </tr>   
+                                 <tr >
+                                        <td  bgcolor= '049FD9' class="highrow text-center">Finesse</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="finesse"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr>   
+                                <tr>
+                                        <td  bgcolor= '049FD9' class="highrow text-center">Doc Central</td>
+                                        <td  class="highrow text-center">
+                                                <input type="checkbox" name="cmsp"  value="true">
+                                        </td>   
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>   
+                                </tr>   
+                                <tr>
+                                        <td  bgcolor= '049FD9' class="highrow text-center">ICX</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="splunk"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr>   
+                                <tr>
+                                        <td  bgcolor= '049FD9' class="highrow text-center">HSBC Service Contracts</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="vdi"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr>   
+                                <tr>
+                                        <td  bgcolor= '049FD9' class="highrow text-center">CMSP</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="ncm"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr>   
+                                <tr>
+                                        <td  bgcolor= '049FD9' class="highrow text-center">Splunk</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="sevone"  value="true">
+                                        </td>  
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>    
+                                </tr>   
+                                <tr>
+                                        <td bgcolor= '049FD9' class="highrow text-center">Coral</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="eigrp"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr> 
+                                <tr>
+                                        <td bgcolor= '049FD9' class="highrow text-center">Cisco Topics</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="ospf"  value="true">
+                                        </td> 
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>     
+                                </tr> 
+                                <tr>
+                                        <td bgcolor= '049FD9' class="highrow text-center">ServiceNow</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="ospf"  value="true">
+                                        </td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>      
+                                </tr> 
+                                <tr>
+                                        <td bgcolor= '049FD9' class="highrow text-center">CSOne</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="ospf"  value="true">
+                                        </td>  
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>    
+                                </tr> 
+                                <tr>
+                                        <td bgcolor= '049FD9' class="highrow text-center">RMA (E2) Access</td>
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="ospf"  value="true">
+                                        </td>  
+                                        <td class="highrow text-center">
+                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                        </td>    
+                                </tr> 
+        
+                               
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                        <button type="submit" class="btn btn-primary"  >Submit</button> 
+                    </form>
+                    </div>
+        </div>
+        
+        <!-- HSBC Hosted Tools-->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="color: #EA3C53">
+                <h3 class="text-center"><strong>HSBC Hosted Tools</strong></h3>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                          70% Complete
+                        </div>
+                      </div>
+            </div>
+        <div class="panel-body">
+                <div class="table-responsive">
+                                <form action="/save" method="POST" id='openings_id'> 
+                                <table class="table table-hover table-striped table-bordered table-sm" cellspacing="4" width="100%">
+                                    <thead>
+                                        <tr>
+                                                <td style="width:600px" class="text-center"><strong>Requirement</strong></td>
+                                                <td class="text-center"><strong>Completed</strong></td>
+                                                <td class="text-center"><strong>Trainer</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                  
+                                        <tr>
+                                            <td  bgcolor= 'EA3C53' class="highrow text-center">HSBC VDI</td>
+                                            <td class="highrow text-center">
+                                                    <input type="checkbox" name="webex" form="openings_id" value="true" >
+                                            </td> 
+                                            <td class="highrow text-center">
+                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                            </td>     
+                                         </tr>   
+                                         <tr >
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">GSD Queues</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="finesse"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr>   
+                                        <tr>
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">Cisco Prime</td>
+                                                <td  class="highrow text-center">
+                                                        <input type="checkbox" name="cmsp"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr>   
+                                        <tr>
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">NCM</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="splunk"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr>   
+                                        <tr>
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">SevOne</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="vdi"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr>   
+                                        <tr>
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">Aperture</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ncm"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr>   
+                                        <tr>
+                                                <td  bgcolor= 'EA3C53' class="highrow text-center">Cramer</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="sevone"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr>   
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">Sharepoint</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="eigrp"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">HSBC Jabber   </td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">Sametime</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">GB Jumphost</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">TACACS</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">VDI MS Office</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">MS Visio</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">Putty</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>   
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>   
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">Internet Access in VDI</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>      
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">Google Chrome</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">QIP</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td> 
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>     
+                                        </tr> 
+                                        <tr>
+                                                <td bgcolor= 'EA3C53' class="highrow text-center">External Email</td>
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="ospf"  value="true">
+                                                </td>  
+                                                <td class="highrow text-center">
+                                                        <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                </td>    
+                                        </tr> 
+                
+                                       
+                                    </tbody>
+                                    <tfoot>
+                                    </tfoot>
+                                </table>
+                                <button type="submit" class="btn btn-primary"  >Submit</button> 
+                            </form>
+                </div>
+        </div>
+        
+        <!-- Network Trainings -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="color: #06A94D">
+                <h3 class="text-center"><strong>Networking Trainings</strong></h3>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                        aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                          40% Complete
+                        </div>
+                      </div>
+            </div>
+        <div class="panel-body">
+                                    <div class="table-responsive">
+                                            <form action="/save" method="POST" id='openings_id'> 
+                                            <table class="table table-hover table-striped table-bordered table-sm" cellspacing="4" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                            <td style="width: 600px" class="text-center"><strong>Requirement</strong></td>
+                                                            <td class="text-center"><strong>Completed</strong></td>
+                                                            <td class="text-center"><strong>Trainer</strong></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                              
+                                                    <tr>
+                                                        <td  bgcolor= '06A94D' class="highrow text-center">EIGRP</td>
+                                                        <td class="highrow text-center">
+                                                                <input type="checkbox" name="webex" form="openings_id" value="true" >
+                                                        </td>
+                                                        <td class="highrow text-center">
+                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                        </td>      
+                                                     </tr>   
+                                                     <tr >
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">OSPF</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="finesse"  value="true">
+                                                            </td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>      
+                                                    </tr>   
+                                                    <tr>
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">BGP</td>
+                                                            <td  class="highrow text-center">
+                                                                    <input type="checkbox" name="cmsp"  value="true">
+                                                            </td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>      
+                                                    </tr>   
+                                                    <tr>
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">WIFI</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="splunk"  value="true">
+                                                            </td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>      
+                                                    </tr>   
+                                                    <tr>
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">Stacking/VSS</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="vdi"  value="true">
+                                                            </td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>      
+                                                    </tr>   
+                                                    <tr>
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">VRF</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ncm"  value="true">
+                                                            </td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>      
+                                                    </tr>   
+                                                    <tr>
+                                                            <td  bgcolor= '06A94D' class="highrow text-center">QoS</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="sevone"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr>   
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">Hardware Issues</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="eigrp"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">Memory & CPU Issues</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">DMVPN</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">MPLS</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">Nexus</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td>  
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>    
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">NetFlow</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">Latency & Slow Response Issues</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td> 
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>     
+                                                    </tr> 
+                                                    <tr>
+                                                            <td bgcolor= '06A94D' class="highrow text-center">WAN,Branch & ATM Network Design</td>
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="ospf"  value="true">
+                                                            </td>  
+                                                            <td class="highrow text-center">
+                                                                    <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                            </td>    
+                                                    </tr> 
+                            
+                                                   
+                                                </tbody>
+                                                <tfoot>
+                                                </tfoot>
+                                            </table>
+                                            <button type="submit" class="btn btn-primary"  >Submit</button> 
+                                        </form>
+            </div>
+        </div>
 
-                       
-                    </tbody>
-                    <tfoot>
-                    </tfoot>
-                </table>
-                <button type="submit" class="btn btn-primary"  >Submit</button> 
+        <!-- Process Trainings -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="color: #FFBF00">
+                <h3 class="text-center "><strong>Process & Tools Training</strong></h3>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                          60% Complete
+                        </div>
+                      </div>
+            </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+            <form action="/save" method="POST" id='openings_id'> 
+                                                        <table class="table table-hover table-striped table-bordered table-sm" cellspacing="4" width="100%">
+                                                            <thead>
+                                                                <tr>
+                                                                        <td style="width:600px" class="text-center"><strong>Requirement</strong></td>
+                                                                        <td class="text-center"><strong>Completed</strong></td>
+                                                                        <td class="text-center"><strong>Trainer</strong></td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                          
+                                                                <tr>
+                                                                    <td  bgcolor= 'FFBF00' class="highrow text-center">Splunk Dashboards</td>
+                                                                    <td class="highrow text-center">
+                                                                            <input type="checkbox" name="webex" form="openings_id" value="true" >
+                                                                    </td>
+                                                                    <td class="highrow text-center">
+                                                                            <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                    </td>      
+                                                                 </tr>   
+                                                                 <tr >
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">RMAs</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="finesse"  value="true">
+                                                                        </td>   
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>   
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">Coral</td>
+                                                                        <td  class="highrow text-center">
+                                                                                <input type="checkbox" name="cmsp"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">ORT</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="splunk"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">Health Checks</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="vdi"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">IOS Upgrades</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="ncm"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td  bgcolor= 'FFBF00' class="highrow text-center">Ticket Handling</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="sevone"  value="true">
+                                                                        </td>  
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>    
+                                                                </tr>   
+                                                                <tr>
+                                                                        <td bgcolor= 'FFBF00' class="highrow text-center">Tools & Utilities</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="eigrp"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr> 
+                                                                <tr>
+                                                                        <td bgcolor= 'FFBF00' class="highrow text-center">Carrier Engagement</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="ospf"  value="true">
+                                                                        </td>  
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>    
+                                                                </tr> 
+                                                                <tr>
+                                                                        <td bgcolor= 'FFBF00' class="highrow text-center">HandOffs</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="ospf"  value="true">
+                                                                        </td>   
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>   
+                                                                </tr> 
+                                                                <tr>
+                                                                        <td bgcolor= 'FFBF00' class="highrow text-center">Country-Specific Nuances</td>
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="ospf"  value="true">
+                                                                        </td> 
+                                                                        <td class="highrow text-center">
+                                                                                <input type="checkbox" name="webex_t" form="openings_id" value="true" >
+                                                                        </td>     
+                                                                </tr> 
+
+                                                               
+                                                            </tbody>
+                                                            <tfoot>
+                                                            </tfoot>
+                                                        </table>
+                                                        <button type="submit" class="btn btn-primary"  >Submit</button> 
             </form>
             </div>
+        </div>
+
+</div>
+<!-- CHECKLIST ENDS -->
+
+
+
+
 <!-- 
         <form action="/add_opening" method="POST" id='openings_id'> 
             <div class="form-group">
