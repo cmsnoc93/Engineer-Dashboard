@@ -23,7 +23,7 @@ six==1.12.0
 textmagic==2.0.3
 twilio==6.26.1
 tzlocal==1.5.1
-urllib3==1.24.2
+urllib3==1.26.5
 virtualenv==16.4.3
 virtualenvwrapper-win==1.2.5
 Werkzeug==0.14.1
